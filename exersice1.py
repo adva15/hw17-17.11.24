@@ -30,9 +30,17 @@ print('Delete the gdp_billion from new dictionary.=',israel_dict_new.pop('gdp_bi
 #g
 print(israel_dict_new.fromkeys(israel_dict_new.keys(), None))
 
-import json
-print(type(json.loads("{'name': 'japan' , 'birth': 700, 'population_millions': 123.533, 'capital': 'tokio' , 'language': 'Japanese' ,  'cities': {'osaka', 'Cantù', 'Tohoku'}, 'currency': 'JPY' , 'area_Kilometer': '377,915' , 'gdp_billion': '4,212,945' }")))
 
+israel_dict_new = israel_dict_new.copy()  # the same dict
+israel_dict_new['cities'] = "{osaka', 'Cantù', 'Tohoku}"
+print(israel_dict_new['cities'], israel_dict['cities'])
+
+
+
+print(str(israel_dict_new).replace("Israel", "japan").replace("1948", "700")
+      .replace("9.3", '123.533') .replace("Jerusalem", 'tokio')
+      .replace("Hebrew", 'Japanese') .replace("cities",  "cities")
+    .replace("ILS", 'JPY').replace("22,14", '377,915').replace("450", '4,212,945'))
 
 
 
