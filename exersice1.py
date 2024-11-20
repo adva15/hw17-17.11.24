@@ -31,7 +31,7 @@ print('Delete the gdp_billion from new dictionary.=',israel_dict_new.pop('gdp_bi
 print(israel_dict_new.fromkeys(israel_dict_new.keys(), None))
 
 
-israel_dict_new = israel_dict_new.copy()  # the same dict
+israel_dict_new = israel_dict_new.copy()  
 israel_dict_new['cities'] = "{osaka', 'Cantù', 'Tohoku}"
 print(israel_dict_new['cities'], israel_dict['cities'])
 
